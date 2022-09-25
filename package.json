@@ -1,5 +1,5 @@
 {
-  "name": "create-react-component",
+  "name": "create-react-functional-component",
   "version": "1.0.0",
   "description": "This package will create a simple react functional component with its css module with a boiler plate code.",
   "type": "module",
