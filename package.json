@@ -1,0 +1,29 @@
+{
+  "name": "create-react-component",
+  "version": "1.0.0",
+  "description": "This package will create a simple react functional component with its css module with a boiler plate code.",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {},
+  "bin": {
+    "srfc": "./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MuraliPrasanth2/create-react-componment.git"
+  },
+  "keywords": [
+    "react-helper",
+    "create-react-component",
+    "create-react-functional-component"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MuraliPrasanth2/create-react-componment/issues"
+  },
+  "homepage": "https://github.com/MuraliPrasanth2/create-react-componment#readme",
+  "dependencies": {
+    "chalk": "^5.0.1"
+  }
+}
