@@ -1,8 +1,12 @@
 ## This NPM package will create a simple react functional boilerplate component along with its CSS module.
 
 ----------
+#### How to install:
+```
+npm i create-react-functional-component
+```
+----------
 #### How to use:
-
 1. Go to the location where you want to create the component.
 2. Type the below command in the terminal. Make sure to modify the componentName in the below command with the name you want.
   
