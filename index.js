@@ -3,6 +3,8 @@ import chalk from "chalk";
 import path from "node:path";
 import { cwd } from "node:process";
 import { mkdirSync, writeFileSync } from "node:fs";
+import gradient from "gradient-string";
+import figlet from "figlet";
 
 // getting component names from cli arguments.
 const cliArguments = process.argv;
@@ -40,9 +42,14 @@ componentNames.forEach(componentName => {
     writeFileSync(componentCssModulePath, getComponentModuleCss(componentName));
   } catch (error) {
     console.log(chalk.red(error.message));
+    process.exit(1);
   }
 });
-process.exit();
+
+//displaying a cool done message.
+figlet("Done :)", (error, data) => {
+  console.log(gradient.mind(data));
+});
 
 function getComponentJs(componentName) {
   return `import styles from "./${componentName}.module.css";
