@@ -3,7 +3,7 @@
 ----------
 #### How to install:
 ```
-npm i create-react-functional-component
+npm i -g create-react-functional-component
 ```
 ----------
 #### How to use:
