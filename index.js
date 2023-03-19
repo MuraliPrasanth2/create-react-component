@@ -9,6 +9,8 @@ import figlet from "figlet";
 // getting component names from cli arguments.
 const cliArguments = process.argv;
 const componentNames = cliArguments.slice(2);
+const isTs = componentNames.includes("-ts");
+componentNames = componentNames.filter(componentName => componentName != "-ts");
 
 // exiting if no componentNames are specified in the cli.
 if (componentNames.length === 0) {
@@ -32,13 +34,24 @@ componentNames.forEach(componentName => {
       `${componentName}.jsx`
     );
 
+    const componentTsPath = path.resolve(
+      componentDirectory,
+      `${componentName}.tsx`
+    );
+
     const componentCssModulePath = path.resolve(
       componentDirectory,
       `${componentName}.module.css`
     );
 
     mkdirSync(componentDirectory);
-    writeFileSync(componentJsPath, getComponentJs(componentName));
+
+    if (isTs) {
+      writeFileSync(componentTsPath, getComponentJs(componentName));
+    } else {
+      writeFileSync(componentJsPath, getComponentJs(componentName));
+    }
+
     writeFileSync(componentCssModulePath, getComponentModuleCss(componentName));
   } catch (error) {
     console.log(chalk.red(error.message));
