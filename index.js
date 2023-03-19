@@ -29,7 +29,7 @@ componentNames.forEach(componentName => {
 
     const componentJsPath = path.resolve(
       componentDirectory,
-      `${componentName}.js`
+      `${componentName}.jsx`
     );
 
     const componentCssModulePath = path.resolve(
