@@ -8,9 +8,10 @@ import figlet from "figlet";
 
 // getting component names from cli arguments.
 const cliArguments = process.argv;
-const componentNames = cliArguments.slice(2);
-const isTs = componentNames.includes("-ts");
-componentNames = componentNames.filter(componentName => componentName != "-ts");
+const componentNames = cliArguments
+  .slice(2)
+  .filter(componentName => componentName != "-ts");
+const isTs = cliArguments.includes("-ts");
 
 // exiting if no componentNames are specified in the cli.
 if (componentNames.length === 0) {
