@@ -55,7 +55,7 @@ function getComponentJs(componentName) {
   return `import styles from "./${componentName}.module.css";
 
 export default function ${componentName}() {
-  return <div>${componentName}</div>;
+  return <div className=styles.${componentName}>${componentName}</div>;
 }`;
 }
 
